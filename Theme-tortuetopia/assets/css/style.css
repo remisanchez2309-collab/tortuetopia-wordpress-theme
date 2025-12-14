@@ -1,0 +1,1264 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.archive-title {
+    text-align: center;
+    color: #494949;
+}
+.archive-description {
+    text-align: center;
+}
+
+.archive-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.archive-posts .post {
+    background-color: #ececec;
+    box-shadow: 0 0 10px #494949;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+img.post-no-logo {
+    width: 100px;
+    height: auto;
+}
+    /* Reset de base et police */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Header */
+    header {
+      background-color: #274029;
+      height: 150px;        /* Vert foncé exact de l’image */
+      padding: 0px 50px!important;               /* Espacement intérieur */
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Logo à gauche, menu à droite (mais centré visuellement) */
+
+
+    }
+
+    /* Menu de navigation */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 45px;                         /* Espacement entre les liens */
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      opacity: 0.8;
+    }
+
+    /* Pour centrer parfaitement le menu quand il y a peu d’éléments */
+    nav {
+      position: relative;
+      left: 15%;
+      transform: translateX(-50%);
+    }
+
+    /* Style du logo */
+    .site-icon {
+        width: 100px;                      /* Ajustez la taille du logo selon vos besoins */
+        height: 100px;
+        }
+
+    
+        /* ...existing code... */
+
+/* ...existing code... */
+
+/* Footer: centered middle column with "Menu" title above vertical nav */
+
+/* footer base */
+#site-footer {
+  background: #274029;
+  color: #fff;
+  padding: 60px 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* layout: left logo | centered menu column | right legal */
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(120px, 220px) 560px minmax(120px, 220px);
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+/* left column (logo) anchored left */
+.footer-logo {
+  justify-self: start;
+  text-align: left;
+}
+.footer-logo-img {
+  width: 120px;
+  height: auto;
+  display: inline-block;
+}
+
+/* middle column: Menu title + vertical list centered */
+.footer-menu {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-menu h3 {
+  font-family: 'Julius Sans One', sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: none; /* keep capitalization as in markup */
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+/* vertical list under the title, centered */
+.footer-menu nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.footer-menu nav ul li { margin: 0; }
+.footer-menu nav ul li a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: opacity .2s ease, transform .15s;
+}
+.footer-menu nav ul li a:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* right column (legal) anchored right */
+.footer-legal {
+  justify-self: end;
+  text-align: right;
+}
+.footer-legal h3 {
+  font-family: 'Julius Sans One', sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #f3f3f3;
+}
+.footer-legal p { margin: 0; color: #fff; line-height: 1.4; }
+.footer-legal a {
+  color: #70E000;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 6px;
+}
+.footer-legal a:hover { text-decoration: underline; }
+
+/* copyright / site info centered below */
+.site-info {
+  max-width: 1200px;
+  margin: 22px auto 0;
+  text-align: center;
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+}
+
+/* À Propos Hero Section */
+.apropos-hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+.apropos-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.apropos-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  text-align: center;
+}
+
+.apropos-card {
+  display: inline-block;
+  background: rgba(255,255,255,0.06);           /* légère couleur pour contraste */
+  border: 1px solid rgba(255,255,255,0.12);     /* bord translucide */
+  border-radius: 20px;
+  padding: 62px 80px;
+  backdrop-filter: blur(8px);                   /* effet flou (modern browsers) */
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  color: #fff;
+  max-width: 820px;
+  text-align: center;
+}
+
+.apropos-card p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.95);
+}
+
+.apropos-hero h1 {
+  display: flex;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  justify-content: center;
+}
+
+
+/* Team Section */
+.team-section {
+  padding: 6rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.team-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-inner h2 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #274029;
+}
+
+/* Team Grid - 3 columns */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Team Card */
+.team-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform .3s ease, box-shadow .3s ease;
+  border: solid 10px #274029;
+  border-radius: 20px;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.team-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+.team-image img {
+  height: 500px;
+  width: 380px;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1.2rem 1.5rem 0.5rem;
+  color: #274029;
+  margin: 0;
+}
+
+.team-card .team-role {
+  font-size: 0.95rem;
+  color: #70E000;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 1.5rem 0.8rem;
+  margin: 0;
+}
+
+.team-card .team-bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  padding: 0 1.5rem 1.5rem;
+  margin: 0;
+}
+
+.centers-section {
+  background: #274029; /* vert foncé */
+  color: #fff;
+  padding: 6rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centers-inner {
+  max-width: 820px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.centers-inner h2 {
+  font-family: "Julius Sans One", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f3f3f3;
+  font-size: 28px;
+  margin: 0;
+}
+
+.centers-btn {
+  display: inline-block;
+  background: #70E000;
+  color: #FCF7F8;
+  padding: 18px 36px;
+  width: 250px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.centers-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.32);
+}
+
+.centers-map-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.centers-map {
+  max-width: 650px;
+  height: auto;
+  display: block;
+  filter: none;
+}
+
+/* ...existing code... */
+
+.conseils-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 3rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+.conseils-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.conseils-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-end; /* bouton et texte à droite */
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.conseils-content {
+  max-width: 420px;
+  text-align: center;
+  padding-top: 500px;
+}
+
+.conseils-btn {
+  display: inline-block;
+  background: transparent;
+  border: solid 2px #70E000;
+  color: #FCF7F8;
+  padding: 20px 50px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 32px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  margin-bottom: 20px;
+}
+
+.conseils-btn:hover {
+  background: #70E000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.32);
+}
+
+.conseils-content p {
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+
+.contact-section {
+  background-color: #f9f9f9; /* couleur de fond claire */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.contact-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-inner h2 {
+  font-size: 2rem;
+  margin-bottom: 75px;
+  color: #274029; /* couleur du texte */
+  font-family: "Julius Sans One", sans-serif;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-btn {
+  background-color: #70E000; /* couleur du bouton */
+  color: #FCF7F8; /* couleur du texte du bouton */
+  padding: 18px 36px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #5bc700; /* couleur du bouton au survol */
+}
+
+/* Nos Centres Page Section */
+.centers-page-section {
+  background-color: #f9f9f9;
+  padding: 5rem 2rem;
+  min-height: 100vh;
+}
+
+.centers-page-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.centers-page-inner h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #274029;
+  margin-bottom: 3.5rem;
+}
+
+/* Grid layout: 2 columns pour les 2 premiers, 1 centré pour le 3e */
+.centers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Forcer le 3e élément au centre sur sa propre ligne */
+.centers-grid .center-card:nth-child(3) {
+  grid-column: 1 / -1;
+
+}
+
+/* Centre Card */
+.center-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform .3s ease;
+}
+
+.center-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image avec bordure arrondie et ombre */
+.center-image {
+  width: 100%;
+  max-width: 340px;
+  height: 240px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 10px solid #274029;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+.center-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Centre Card Title */
+.center-card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #274029;
+  margin: 0 0 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Découvrir Button */
+.center-btn {
+  display: inline-block;
+  background: #70E000;
+  color: #FCF7F8;
+  padding: 12px 32px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all .3s ease;
+}
+
+.center-btn:hover {
+  background: #5bc700;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ...existing code... */
+
+/* Nos Conseils Page - Hero Section */
+.conseils-page-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+.conseils-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.conseils-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.conseils-page-hero h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+/* Conseils Cards Section */
+.conseils-cards-section {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+}
+
+.conseils-cards-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Grid for 2 cards side by side */
+.conseils-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Individual Conseil Card */
+.conseil-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.conseil-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Full width card (3rd card) - centered */
+.conseil-card-full {
+  max-width: 500px;
+  width: 100%;
+}
+
+.conseil-btn {
+  display: inline-block;
+  background: #70E000;
+  color: #FCF7F8;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all .3s ease;
+}
+
+.conseil-btn:hover {
+  background: #5bc700;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.conseil-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Info Section - Dark background with frosted glass */
+.conseils-info-section {
+  position: relative;
+  background-color: #274029;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.conseils-info-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Frosted glass card */
+.conseils-info-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 40px 50px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  max-width: 800px;
+  text-align: center;
+}
+
+.conseils-info-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+
+/* ...existing code... */
+
+/* Les Tortues - Hero Section */
+.tortues-hero-section {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+.tortues-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.tortues-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.tortues-hero-section h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Frosted glass card for text */
+.tortues-hero-card {
+  background: rgba(39, 64, 41, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 40px 50px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+}
+
+.tortues-hero-card p {
+  margin: 0 0 1.2rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.tortues-hero-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Les Tortues Types Section */
+.tortues-types-section {
+  background-color: #274029; /* fond vert foncé */
+  padding: 4rem 2rem;
+  color: #fff;
+}
+
+.tortues-types-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 2 colonnes côte à côte */
+.tortues-types-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+/* Individual Type Card - Layout vertical */
+.tortues-type-card {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s ease;
+}
+
+.tortues-type-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Titre en haut sur fond vert */
+.tortues-type-header {
+  padding: 1.5rem 0 1rem;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.tortues-type-header h2 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Image avec coins arrondis */
+.tortues-type-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.tortues-type-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contenu texte blanc sur fond blanc en bas */
+.tortues-type-content {
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 12px;
+  flex-grow: 1;
+}
+
+.tortues-type-content p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #333;
+  margin: 0;
+  text-align: left;
+}
+
+/* ...existing code... */
+
+/* Tortue Regen Section */
+.tortue-regen {
+  background-color: #FCF7F8;
+  padding: 3.5rem 2rem;
+  color: #fff;
+}
+
+.tortue-regen-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tortue-regen p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+}
+
+/* PAGE CONTACT — appliquer la bonne typo */
+
+.page-id-16 h1,
+.page-id-16 h2 {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 600;
+}
+
+/* Paragraphe intro */
+.page-id-16 p {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* Titre : "Nous contacter" */
+.page-id-16 h3 {
+    font-family: "Julius Sans One", sans-serif !important;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.page-id-16 {
+    background-color: #f9f9f9;
+}
+
+.page-id-16 .contact-inner h2 {
+    font-family: "Julius Sans One", sans-serif !important;
+    
+}
+
+/* ...existing code... */
+
+/* Centre Hero Section */
+.centre-hero-section {
+  background-color: #f9f9f9;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.centre-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.centre-hero-section h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #274029;
+  margin: 0;
+}
+
+/* Centre Info Section with green background */
+.centre-info-section {
+  background-color: #274029;
+  padding: 4rem 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centre-info-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* Centre Logo */
+.centre-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.centre-logo img {
+  width: 140px;
+  height: auto;
+  filter: brightness(0) invert(1); /* make white if needed */
+}
+
+/* Centre Info Card */
+.centre-info-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 35px 45px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  text-align: center;
+}
+
+.centre-info-card p {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.centre-info-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Centre Image Section */
+.centre-image-section {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+}
+
+.centre-image-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.centre-image-card {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 5px solid #274029;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.centre-image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Centre Map Section */
+.centre-map-section {
+  background-color: #fff;
+  padding: 4rem 2rem;
+}
+
+.centre-map-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.centre-map-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.centre-map-container iframe {
+  border-radius: 12px;
+}
+
+/* ...existing code... */
+
+/* Conseil Hero Section */
+.conseil-hero-section {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+.conseil-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.conseil-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  text-align: center;
+}
+
+.conseil-hero-section h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Conseil Content Section */
+.conseil-content-section {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+}
+
+.conseil-content-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Intro paragraph */
+.conseil-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.conseil-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #000000;
+  margin: 0;
+}
+
+/* Tips Grid */
+.conseil-tips {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Individual Tip */
+.conseil-tip {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Numbered Circle */
+.conseil-tip-number {
+  width: 80px;
+  height: 80px;
+  background: #70E000;
+  color: #FCF7F8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Tip Content */
+.conseil-tip-content h3 {
+  font-size: 1.3rem;
+  color: #274029;
+  margin: 0 0 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.conseil-tip-content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #000000;
+  margin: 0;
+}
+
+/* ...existing code... */
+
+/* Conseil Final Section */
+.conseil-final-section {
+  background-color: #274029;
+  padding: 3rem 2rem;
+  color: #fff;
+}
+
+.conseil-final-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.conseil-final-inner p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  background: rgba(39, 64, 41, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 40px 50px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
